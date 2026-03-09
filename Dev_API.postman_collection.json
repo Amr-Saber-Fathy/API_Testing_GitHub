@@ -14,7 +14,18 @@
           "listen": "test",
           "script": {
             "exec": [
-              ""
+              "let access_token = pm.response.json().access_token\r",
+              "\r",
+              "pm.globals.set(\"access_token\", \"Bearer \" + access_token);\r",
+              "\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Check User FirstName\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.firstName).to.eql(\"Amr\");\r",
+              "});"
             ],
             "type": "text/javascript",
             "packages": {},
@@ -85,7 +96,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              ""
+              "pm.collectionVariables.set(\"task_Id\", pm.response.json()._id);"
             ],
             "type": "text/javascript",
             "packages": {},
