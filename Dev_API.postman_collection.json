@@ -67,7 +67,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"email\": \"tester@test.co\",\r\n    \"password\": \"test_12test\"\r\n}",
+          "raw": "{\r\n    \"email\": \"tester@test.co\",\r\n    \"phone\": \"02154512\",\r\n    \"password\": \"test_12test\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -142,7 +142,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"item\": {{name}},\r\n    \"isCompleted\": false\r\n}",
+          "raw": "{\r\n    \"item\": {{name}},\r\n    \"isCompleted\": false,\r\n    \"date\": \"03/09/2026\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
